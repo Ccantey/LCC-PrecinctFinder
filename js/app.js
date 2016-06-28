@@ -59,7 +59,7 @@ function toggleBaseLayers(el, layer1, layer2){
 function getOverlayLayers(el, switchId){
     $('.loader').show();
 
-    switchMap = {"precinctsonoffswitch": "vtd2015general","countyonoffswitch": "cty2010", "cityonoffswitch":"mcd2015", "cononoffswitch":"cng2012", "ssonoffswitch":"sen2012_vtd2015", "shonoffswitch":"hse2012_vtd2015"}
+    switchMap = {"sdonoffswitch": "sd1516","countyonoffswitch": "cty2010", "cityonoffswitch":"mcd2015", "cononoffswitch":"cng2012", "ssonoffswitch":"sen2012_vtd2015", "shonoffswitch":"hse2012_vtd2015"}
     console.log(switchMap[switchId]);
    
     if(el.is(':checked')){
@@ -70,7 +70,7 @@ function getOverlayLayers(el, switchId){
     	$('.leaflet-marker-icon.'+switchMap[switchId]).show();
 
     	if(typeof overlayLayers[switchMap[switchId]] === 'undefined'){
-    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/precincts/data/mapserver.map', {
+    		overlayLayers[switchMap[switchId]] = L.tileLayer.wms('http://www.gis.leg.mn/cgi-bin/mapserv?map=/web/gis/iMaps/schooldistricts/data/mapserver.map', {
 			    format: 'image/png',
 			    transparent: false,
 			    minZoom: 6,
@@ -171,8 +171,11 @@ function addMemberData(memberData){
 	    $('.memberLink, .precinctLink').show();
 	    //add memberdata from map selection to member list
 	    //ALTERNATIVE SOLUTION! Use house/senate image server: http://www.house.leg.state.mn.us/hinfo/memberimgls89/ -- but then you have issue of large image sizes, slow performance
-	    $('.precinctTitle').html('2015 Precinct Information');
-	    $('#precinctData').html('Precinct - ' + memberData.features[3].properties.district).delay("slow").fadeIn();
+	    $('.precinctTitle').html('2015-16 School District');
+	    $('#precinctData').html('School District - ' + memberData.features[3].properties.district).delay("slow").fadeIn();
+	    $('#precinctName').html(memberData.features[3].properties.name).delay("slow").fadeIn();
+	    $('.precincts').attr('data-webid', memberData.features[3].properties.party);
+
 	    $('#housephoto').attr('src', 'images/House/tn_'+memberData.features[0].properties.district+'.jpg').attr('width','auto').attr('height','auto');
 		$('#housemember').html(memberData.features[0].properties.name + '<span class="party"> ('+memberData.features[0].properties.party+')</span>').delay("slow").fadeIn();
 		$('#housedistrict').html('MN House - ' + memberData.features[0].properties.district).delay("slow").fadeIn();

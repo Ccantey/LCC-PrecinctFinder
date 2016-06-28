@@ -39,29 +39,28 @@
     		<div id="map_layers_content_title">Layers</div>
     		<div id="map_layers_content_list">
 
-    		    <div id="vtddiv"class="onoffswitch">
+    		    <div id="vtddiv" class="onoffswitch">
 	    		    
-	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="precinctsonoffswitch" checked>
-	    				<label class="onoffswitch-label" for="precinctsonoffswitch">
+	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="sdonoffswitch" checked>
+	    				<label class="onoffswitch-label" for="sdonoffswitch">
 	        				<span class="onoffswitch-inner"></span>
 	        				<span class="onoffswitch-switch"></span>
-	    				</label>
-	    			
+	    				</label>	    			
 				</div>
-				<div class='layersswitchLabel'>Precincts</div>
-	    		<div id="shdiv"class="onoffswitch">
-	    		    
+				<div class='layersswitchLabel'>School Districts</div>
+
+
+	    		<div id="shdiv" class="onoffswitch">	    		    
 	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="shonoffswitch" checked>
 	    				<label class="onoffswitch-label" for="shonoffswitch">
 	        				<span class="onoffswitch-inner"></span>
 	        				<span class="onoffswitch-switch"></span>
-	    				</label>
-	    			
+	    				</label>	    			
 				</div>
 				<div class='layersswitchLabel'>State House Districts</div>
 
-				<div id="ssdiv"class="onoffswitch">
-	    		    
+
+				<div id="ssdiv" class="onoffswitch">	    		    
 	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="ssonoffswitch" checked>
 	    				<label class="onoffswitch-label" for="ssonoffswitch">
 	        				<span class="onoffswitch-inner"></span>
@@ -70,7 +69,7 @@
 	    			
 				</div>
 				<div class='layersswitchLabel'>State Senate Districts</div>
-				<div id="congressdiv"class="onoffswitch">
+				<div id="congressdiv" class="onoffswitch">
 	    		    
 	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="cononoffswitch" checked>
 	    				<label class="onoffswitch-label" for="cononoffswitch">
@@ -81,7 +80,7 @@
 				</div>
                 <div class='layersswitchLabel'>Congressional Districts</div>
                 <!-- boudaries -->
-                <div id="citydiv"class="onoffswitch">
+                <div id="citydiv" class="onoffswitch">
 	    		    
 	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="cityonoffswitch" checked>
 	    				<label class="onoffswitch-label" for="cityonoffswitch">
@@ -92,7 +91,7 @@
 				</div>
 				<div class='layersswitchLabel'>Municipal Boundaries</div>
 
-				<div id="countydiv"class="onoffswitch">
+				<div id="countydiv" class="onoffswitch">
 	    		    
 	    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="countyonoffswitch" checked>
 	    				<label class="onoffswitch-label" for="countyonoffswitch">
@@ -109,7 +108,7 @@
 
     		<div id="map_layers_basemap_title">Basemap Layers</div>
     		<!-- <button id = "switchBasemap">Switch</button> -->
-    		<div id="satellitediv"class="onoffswitch">
+    		<div id="satellitediv" class="onoffswitch">
     		    
     			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="satellitonoffswitch" checked>
     				<label class="onoffswitch-label" for="satellitonoffswitch">
@@ -159,9 +158,10 @@
 			        
 			        	
 			        	<div class="membersublist">
-			        		 <div class="precinctLink"><span id="mnprecinctlink">Show District <i class="fa fa-external-link-square"></i></span></div>   	
+			        		 <div class="memberLink"><span id="mnprecinctlink">Show District <i class="fa fa-external-link-square"></i></span></div>   	
 			        		<div  class='precinctTitle'></div>
 			        		<div id='precinctData' class='lcc_gis_precinct'></div>
+			        		<div id='precinctName' class='lcc_gis_precinctName'></div>
 			        	</div>
 			        	<!-- <img id='housephoto' class='mnhouse_img' src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="0" height="0" alt=""/> -->
 			        

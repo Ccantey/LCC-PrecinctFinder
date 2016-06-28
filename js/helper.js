@@ -49,12 +49,12 @@ $( document ).ready(function() {
 	// hide links - format is off until results come back
     $('.memberLink').hide();
 
-    $('.precincts').click(function(e){
-    	//console.log($(this).data('webid'))
-    	window.open('http://pollfinder.sos.state.mn.us/');
-    })
+    // $('.precincts').click(function(e){
+    // 	//console.log($(this).data('webid'))
+    // 	window.open('http://pollfinder.sos.state.mn.us/');
+    // })
 
-    $( ".mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).click(function(e) {
+    $( ".precincts, .mnhouse, .mnsenate, .ushouse, .ussenate1, .ussenate2" ).click(function(e) {
         var link = '';
         // dataLayer.push({'event': 'memberclick'});
         link = $(this).attr('data-webid');
@@ -125,7 +125,7 @@ $( document ).ready(function() {
 	});
 
     //fetch overlay layers
-	$('#precinctsonoffswitch, #countyonoffswitch, #cononoffswitch, #ssonoffswitch, #shonoffswitch, #cityonoffswitch').click(function(){
+	$('#sdonoffswitch, #countyonoffswitch, #cononoffswitch, #ssonoffswitch, #shonoffswitch, #cityonoffswitch').click(function(){
 		// console.log($(this).attr('id'));
 		var elementName = $(this).attr('id')
         getOverlayLayers($(this), $(this).attr('id'));

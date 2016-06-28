@@ -230,7 +230,7 @@ ul{
     font-weight: bold;
     /*bottom: 80px;*/
     /*left:80px;*/
-    top:-17px;
+    top:-7px;
     text-align: center;
     z-index: 101;
 
@@ -252,8 +252,15 @@ ul{
 .lcc_gis_precinct{
     position: relative;
     /*left: 80px;*/
-    top:-13px;
+    top:-5px;
     text-align: center;    
+}
+
+.lcc_gis_precinctName{
+    position: relative;
+    top:-2px;
+    text-align: center;
+
 }
 .lcc_gis_memberdistrict{
     position: relative;
